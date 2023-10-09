@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Universidad Cenfotec</title>
+    <link rel="icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/lightbox2.css">
+    <link rel="stylesheet" href="css/estilo.css" type="text/css">
+    <script src="https://kit.fontawesome.com/b6eafbf987.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+
+<!-- header-->
+<header class="container-fluid">
+
+  <div class="row container">
+  <div class="col-lg-6 logo">
+    <a href="index.html"><img src="imagenes/logo.png" alt="logo"></a>
+  </div>
+  <div class="col-lg-6">
+    <div class="langWrap d-flex">
+      <li class="nav-item">
+      <!-- atributo language -->
+        <a href="#" language='spanish' class="active"><img class="img-fluid" src="imagenes/es.webp"
+            alt="Español"></a>
+      </li>
+      <li class="nav-item">
+      <!-- atributo language -->
+        <a href="#" language='english'> <img class="img-fluid" src="imagenes/eu.webp" alt="Ingles"></a>
+      </li>
+    </div>
+  
+    <nav class="navbar navbar-expand-md navbar-dark">
+      
+      <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active menuHome" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menuNosotros" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle menuPeliculas" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Películas
+            </a>
+  
+            <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item menuDomingo" href="semanales7.html">Domingo</a></li>
+              <li><a class="dropdown-item menuLunes" href="semanales1.html">Lunes</a></li>
+              <li><a class="dropdown-item menuMartes" href="semanales2.html">Martes</a><li>   
+              <li><a class="dropdown-item menuMiercoles" href="semanales3.html">Miércoles</a></li>
+              <li><a class="dropdown-item menuJueves" href="semanales4.html">Jueves</a></li>
+              <li><a class="dropdown-item menuViernes" href="semanales5.html">Viernes</a></li>
+              <li><a class="dropdown-item menuSabado" href="semanales6.html">Sábado</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menuDulceria" href="dulceria.html">Dulcería</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link menuContacto" href="contacto.html">Contáctenos</a>
+          </li>   
+        </ul>
+      </div>
+      </div>  
+    </nav>
+  </div>
+  </div>
+  </header>
+
+<main class="detalles">
+ <!--
+<section class="movie15">
+    <h1 class="py-5 px-5">Rudo y Cursi</h1>
+</section>  
+--> 
+
+<h1 class="pt-5 pb-3">Rudo y Cursi</h1>
+<hr>
+<section class="container pt-5">
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <img id="myImg" src="imagenes/movie15/movie15.webp" alt="" style="max-width:250px">
+        <!-- ID modal -->
+        <div id="modal1" class="modal">
+            <!-- botón de cierre del modal -->
+            <div class="close">&times;</div>
+            <!-- contenido del modal -->
+            <img class="modal-content" id="img01">
+        <div id="caption"></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 director">
+            <p><strong>Director: </strong>Carlos Cuarón</p>
+            <hr>
+            <p><strong><span class="langPais">País:</span></strong> Mexico</p>
+            <hr>
+            <p><strong><span class="langYear">Año:</span></strong> 2008</p>
+            <hr>
+            <p><strong><span class="langPlot">Sipnosis:</span></strong> <span class="langPlot2"> Dos hermanos, Beto, que quiere ser futbolista, y Toto, que sueña con ser cantante de música norteña, desean llevar a cabo sus sueños para mejorar su situación económica. Sin embargo, la rivalidad fraternal es lo que realmente los pone a prueba.</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4 reparto">
+            <h2 class="pb-3 langReparto">Reparto</h2>
+            <hr>
+            <div class="row pb-3 text-center">
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <h4>Gael<span class="ocultar"><br></span> García</h4>
+                <img src="imagenes/movie15/movie15-reparto1.webp" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <h4>Diego<span class="ocultar"><br></span> Luna</h4>
+                <img src="imagenes/movie15/movie15-reparto2.webp" alt="" class="img-fluid">
+                </div>
+                <div class=" col-sm-3 col-md-3 col-lg-3">
+                    <h4>Guillermo<span class="ocultar"><br></span> Francella</h4>
+                <img src="imagenes/movie15/movie15-reparto3.webp" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <h4>Adriana<span class="ocultar"><br></span> Paz</h4>
+                <img src="imagenes/movie15/movie15-reparto4.webp" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="text-center">
+              <button onclick="back()" class="btn btn-outline-dark btn-sm mt-3 mb-5 volver">Volver</button>
+              <button id="boton" onclick="ejecutar('video','youtube')" class="btn btn-outline-dark btn-sm mt-3 mb-5 trailer">Ver Tráiler</button>
+              <div id="video" class="lightbox" onclick="ocultar('video','youtube')">
+                <div class="lightbox-container">
+                  <div class="lightbox-content">
+                    <button onclick="ocultar('video','youtube')" class="lightbox-close">
+                    Cerrar | ✕
+                    </button>
+                    <div class="video-container">
+                      <iframe id="youtube" width="960" height="548" src="https://www.youtube.com/embed/zAMlwcJchoQ?showinfo=0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <button class="btn btn-outline-dark btn-sm mt-3 mb-5 comprar">Comprar</button>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="container-fluid  mt-5 pt-5 pb-3" style="color:#fff">
+  <div class="row">
+    <div class="col-lg-4 menu-footer">
+      <ul class="text-center">
+        <li><a class="footerHome" href="index.html">Inicio  / </a></li>
+        <li><a class="footerNosotros" href="nosotros.html">Nosotros  / </a></li>
+        <li><a class="footerDulceria" href="dulceria.html">Dulcería  / </a></li>
+        <li><a class="footerContacto" href="contacto.html">Contáctenos</a></li>
+      </ul>
+      <h5 class="text-center footerEncuesta">Si has visitado el cine, ayúdanos con esta encuesta para mejorar el servicio</h5>
+      <div class="text-center">
+      <a href="encuesta.html" class="btn btn-warning btn-sm mt-3 mb-5 footerEncuesta2" role="button" aria-pressed="true">Ver Encuesta</a>
+      </div>
+    </div>
+    <div class="col-lg-4 redes">
+      <div class="text-center pb-4">
+        <a href="index.html"><img src="imagenes/logo.png" alt="logo"></a>
+      </div>
+      <ul class="text-center">
+        <li><h2 class="text-center footerSocial">Síguenos en:</h2> </li>
+        <li><a href="https://www.facebook.com/" target="blank"><i class="fa-brands fa-facebook fa-2x" style="color:#fff"></i></a></li>
+        <li><a href="https://www.whatsapp.com/" target="blank"><i class="fa-brands fa-whatsapp fa-2x" style="color:#fff"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="blank"><i class="fa-brands fa-instagram fa-2x " style="color:#fff"></i></a></li>
+        <li><a href="https://www.youtube.com/" target="blank"><i class="fa-brands fa-youtube fa-2x " style="color:#fff"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-lg-4 footer-semanales">
+      <ul>
+        <li><a class="footerDomingo" href="semanales7.html">Domingo director del mes</a></li>
+        <li><a class="footerLunes" href="semanales1.html">Lunes de cine Latino</a></li>
+        <li><a class="footerMartes" href="semanales2.html">Martes de cine Europeo</a></li>
+        <li><a class="footerMiercoles" href="semanales3.html">Miércoles de cine Asiático</a></li>
+        <li><a class="footerJueves" href="semanales4.html">Jueves de cine Animado</a></li>
+        <li><a class="footerViernes" href="semanales5.html">Viernes de cine de culto #1</a></li>
+        <li><a class="footerSabado" href="semanales6.html">Sábado de cine de culto #2</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="js/pestanas.js"></script>
+  <script src="js/desplegables.js"></script>
+  <script src="js/lenguaje/lang-movie15.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/lightbox2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>    

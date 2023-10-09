@@ -1,0 +1,135 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
+	margin: 0;   
+   }
+
+header{
+	height: 100vh;
+}
+header h1 {
+	letter-spacing: 5px;
+	font-size: 50px;
+    padding:20px 0;	
+
+}	
+
+header h2{
+    font-size: 50px;
+}
+
+.intro h1{
+    text-shadow: 0 0 30px #000;
+	letter-spacing: 5px;
+	font-size: 50px;
+    padding:20px 0;	
+    filter:
+    drop-shadow(1px 1px 10px black)
+    drop-shadow(3px 3px 15px gold)
+    drop-shadow(6px 6px 25px red);
+}
+
+.intro h2{
+    font-size: 50px;
+    text-shadow: 0 0 30px #000;
+    filter:
+    drop-shadow(1px 1px 10px black)
+    drop-shadow(3px 3px 15px gold)
+    drop-shadow(6px 6px 25px red);
+}
+
+.login{
+    background-image:url('../imagenes/login.jpg');
+    background-size:cover;
+    background-position-y:center;
+    box-shadow: inset 0 0 0 1000px #080808b3;
+
+}
+
+.cine{
+    padding:50px 30px;
+    border-radius: 24px;
+    background-color: rgba(186, 15, 15, 0.4);
+    color:#fff; 
+}
+
+.cine2{
+    width:50%;
+    padding:50px 30px;
+    border-radius: 24px;
+    background-color: rgba(186, 15, 15, 0.4);
+    color:#fff; 
+}
+
+.wrap{
+    width:30%;
+    margin:0 auto;
+
+}
+
+ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+li{
+    display: inline-block;
+    padding:0 25px 0 0;
+}
+
+.fade a{  opacity:1;
+    filter:alpha(opacity=20);
+    -ms-transition:all 0.5s ease-in;
+    -moz-transition:all 0.5s ease-in;
+    -o-transition:all 0.5s ease-in;
+    -webkit-transition:all 0.5s ease-in;
+    transition:all 0.5s ease-in;
+    behavior: url(pie/PIE.htc);
+}
+ .fade a:hover{
+    opacity:0.4;
+    filter:alpha(opacity=4);
+    -ms-transition:all 0.5s ease-out;
+    -moz-transition:all 0.5s ease-out;
+    -o-transition:all 0.5s ease-out;
+    -webkit-transition:all 0.5s ease-out;
+    transition:all 0.5s ease-out;
+    behavior: url(pie/PIE.htc);
+}
+
+
+
+@media (max-width: 576px) {
+	header p{
+		text-align: justify;
+		font-size:16px;
+	}
+
+    .wrap{
+        width:100%;
+        margin:0 auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+	.wrap{
+        width:100%;
+        margin:0 auto;
+    }
+
+}
+
+@media (max-width: 992px) {
+	.wrap{
+        width:40%;
+        margin:0 auto;
+    }
+
+    .cine{
+        padding:50px 5%;
+    }
+
+}
+
+

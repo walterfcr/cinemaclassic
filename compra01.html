@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Universidad Cenfotec</title>
+    <link rel="icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="css/compra.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css" type="text/css">
+    <script src="https://kit.fontawesome.com/b6eafbf987.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+
+<!-- header-->
+<header class="container-fluid">
+
+  <div class="row container">
+  <div class="col-lg-6 logo">
+    <a href="index.html"><img src="imagenes/logo.png" alt="logo"></a>
+  </div>
+  <div class="col-lg-6">
+    <div class="langWrap d-flex">
+      <li class="nav-item">
+      <!-- atributo language -->
+        <a href="#" language='spanish' class="active"><img class="img-fluid" src="imagenes/es.webp"
+            alt="Español"></a>
+      </li>
+      <li class="nav-item">
+      <!-- atributo language -->
+        <a href="#" language='english'> <img class="img-fluid" src="imagenes/eu.webp" alt="Ingles"></a>
+      </li>
+    </div>
+  
+    <nav class="navbar navbar-expand-md navbar-dark">
+      
+      <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link menuHome" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menuNosotros" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle menuPeliculas" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Películas
+            </a>
+  
+            <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item menuDomingo" href="semanales7.html">Domingo</a></li>
+              <li><a class="dropdown-item menuLunes" href="semanales1.html">Lunes</a></li>
+              <li><a class="dropdown-item menuMartes" href="semanales2.html">Martes</a><li>   
+              <li><a class="dropdown-item menuMiercoles" href="semanales3.html">Miércoles</a></li>
+              <li><a class="dropdown-item menuJueves" href="semanales4.html">Jueves</a></li>
+              <li><a class="dropdown-item menuViernes" href="semanales5.html">Viernes</a></li>
+              <li><a class="dropdown-item menuSabado" href="semanales6.html">Sábado</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link menuDulceria" href="dulceria.html">Dulcería</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link menuContacto" href="contacto.html">Contáctenos</a>
+          </li>   
+        </ul>
+      </div>
+      </div>  
+    </nav> 
+  </div>
+  </div>
+  </header>
+
+
+
+
+
+
+  <form id="cinema" name="limitarCheckbox" onsubmit="return funcion();">
+
+  <div class="row pt-5 comprarWrap">
+    <h1 class="text-center pb-5">John Wick 4</h1>
+    <hr>
+    <div class="col-lg-6 poster pt-5">
+      <img src="imagenes/movie1/movie1.webp" alt="" class="img-fluid">
+    </div>
+    
+    <div class="col-lg-6 pt-5">
+      <p>Entrada regular: ¢3000</p>
+      <p>Entrada VIP: ¢5000</p>
+      <p>*Máximo 10 entradas</p>
+      <label for="nombre">Nombre del solicitante:</label>
+      <input id="nombre" type="text" class="form-control" pattern="^[A-Za-z][A-Za-z\s]+$"><br>
+
+          <label class="" for="fecha">Escoger Fecha:</label>
+          <select class="form-control" id="fecha">
+                  <option value=""></option>
+                  <option value="1" id="outputResultadoFecha"></option>
+                  <option value="2" id="outputResultadoFecha2"></option>
+                  <option value="3" id="outputResultadoFecha3"></option>
+                  <option value="4" id="outputResultadoFecha4"></option>
+          </select> 
+
+      <label class="" for="cine">cine:</label>
+      <select class="form-control" id="cine">
+              <option value=""></option>
+              <option value="San José">San José</option>
+              <option value="Heredia">Heredia </option>
+              <option value="Cartago">Cartago</option>
+      </select>
+      <label class="" for="tanda">Tanda:</label>
+      <select class="form-control" id="tanda">
+          <option value=""></option>
+          <option value="Tanda de 11 am">Tanda de 11 am</option>
+          <option value="Tanda de 3 pm">Tanda de 3 pm </option>
+          <option value="Tanda de 7 pm">Tanda de 7 pm</option>
+      </select>
+    </div>
+    </div>
+  
+   <div class="comprarWrap2 pantalla">
+    <img src="imagenes/pantalla.webp" alt="" class="img-fluid">
+    <table>
+
+        <tr class="filaA">
+            <td><input type="checkbox" class="seleccionado" onclick="return false" name="butacas" value="A01"><br>A01</td>
+            <td><input type="checkbox" name="butacas" value=" A02"><br>A02</td>
+            <td><input type="checkbox" name="butacas" value=" A03"><br>A03</td>
+            <td><input type="checkbox" name="butacas" value=" A04"><br>A04</td>
+            <td><input type="checkbox" name="butacas" value=" A05"><br>A05</td>
+            <td><input type="checkbox" name="butacas" value=" A06"><br>A06</td>
+            <td><input type="checkbox" name="butacas" value=" A07"><br>A07</td>
+            <td><input type="checkbox" name="butacas" value=" A08"><br>A08</td>
+            <td><input type="checkbox" name="butacas" value=" A09"><br>A09</td>
+            <td><input type="checkbox" name="butacas" value=" A10"><br>A10</td>
+            <td><input type="checkbox" name="butacas" value=" A11"><br>A11</td>
+            <td><input type="checkbox" name="butacas" value=" A12"><br>A12</td>
+            <td><input type="checkbox" name="butacas" value=" A13"><br>A13</td>
+            <td><input type="checkbox" name="butacas" value=" A14"><br>A14</td>
+            <td><input type="checkbox" name="butacas" value=" A15"><br>A15</td>
+        </tr>
+        <tr class="filaB">
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" B01"><br><span class="checkboxtexto">B01</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" B02"><br><span class="checkboxtexto">B02</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" B03"><br><span class="checkboxtexto">B03</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" B04"><br><span class="checkboxtexto">B04</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" B05"><br><span class="checkboxtexto">B05</span></td>
+            <td><input type="checkbox" class="seleccionado" name="butacas" value=" B06"><br><span class="checkboxtexto">B06</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" B07"><br><span class="checkboxtexto">B07</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" B08"><br><span class="checkboxtexto">B08</span></td>
+            <td><input type="checkbox" name="butacas" value=" B09"><br><span class="checkboxtexto">B09</span></td>
+            <td><input type="checkbox" name="butacas" value=" B10"><br><span class="checkboxtexto">B10</span></td>
+            <td><input type="checkbox" name="butacas" value=" B11"><br><span class="checkboxtexto">B11</span></td>
+            <td><input type="checkbox" name="butacas" value=" B12"><br><span class="checkboxtexto">B12</span></td>
+            <td><input type="checkbox" name="butacas" value=" B13"><br><span class="checkboxtexto">B13</span></td>
+            <td><input type="checkbox" name="butacas" value=" B14"><br><span class="checkboxtexto">B14</span></td>
+            <td><input type="checkbox" name="butacas" value=" B15"><br><span class="checkboxtexto">B15</span></td>
+
+        </tr>
+        <tr class="filaC">
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" C01"><br>C01</td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" C02"><br>C02</td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" C03"><br>C03</td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" C04"><br>C04</td>
+            <td><input type="checkbox" name="butacas" value=" C05"><br>C05</td>
+            <td><input type="checkbox" name="butacas" value=" C06"><br>C06</td>
+            <td><input type="checkbox" name="butacas" value=" C07"><br>C07</td>
+            <td><input type="checkbox" name="butacas" value=" C08"><br>C08</td>
+            <td><input type="checkbox" name="butacas" value=" C09"><br>C09</td>
+            <td><input type="checkbox" name="butacas" value=" C10"><br>C10</td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" C11"><br>C11</td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" C12"><br>C12</td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" C13"><br>C13</td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" C14"><br>C14</td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" C15"><br>C15</td>
+        </tr>
+        <tr class="filaD">
+            <td><input type="checkbox" name="butacas" value=" D01"><br><span class="checkboxtexto">D01</span></td>
+            <td><input type="checkbox" name="butacas" value=" D02"><br><span class="checkboxtexto">D02</span></td>
+            <td><input type="checkbox" name="butacas" value=" D03"><br><span class="checkboxtexto">D03</span></td>
+            <td><input type="checkbox" name="butacas" value=" D04"><br><span class="checkboxtexto">D04</span></td>
+            <td><input type="checkbox" name="butacas" value=" D05"><br><span class="checkboxtexto">D05</span></td>
+            <td><input type="checkbox" name="butacas" value=" D06"><br><span class="checkboxtexto">D06</span></td>
+            <td><input type="checkbox" name="butacas" value=" D07"><br><span class="checkboxtexto">D07</span></td>
+            <td><input type="checkbox" name="butacas" value=" D08"><br><span class="checkboxtexto">D08</span></td>
+            <td><input type="checkbox" name="butacas" value=" D09"><br><span class="checkboxtexto">D09</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" D10"><br><span class="checkboxtexto">D10</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" D11"><br><span class="checkboxtexto">D11</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" D12"><br><span class="checkboxtexto">D12</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" D13"><br><span class="checkboxtexto">D13</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" D14"><br><span class="checkboxtexto">D14</span></td>
+            <td><input type="checkbox" class="seleccionado"name="butacas" value=" D15"><br><span class="checkboxtexto">D15</span></td>
+        </tr>
+
+        <tr class="zonaVip">
+          <td></td><td></td><td></td><td>Z</td><td>O</td><td>N</td><td>A</td><td></td><td></td><td>V</td><td>I</td><td>P</td><td></td><td></td><td></td>
+        </tr>
+        <tr class="filaE">
+            <td><input type="checkbox" name="butacas2" value=" E01"><br>E01</td>
+            <td><input type="checkbox" name="butacas2" value=" E02"><br>E02</td>
+            <td><input type="checkbox" name="butacas2" value=" E03"><br>E03</td>
+            <td><input type="checkbox" name="butacas2" value=" E04"><br>E04</td>
+            <td><input type="checkbox" name="butacas2" value=" E05"><br>E05</td>
+            <td><input type="checkbox" name="butacas2" value=" E06"><br>E06</td>
+            <td><input type="checkbox" name="butacas2" value=" E07"><br>E07</td>
+            <td><input type="checkbox" name="butacas2" value=" E08"><br>E08</td>
+            <td><input type="checkbox" name="butacas2" value=" E09"><br>E09</td>
+            <td><input type="checkbox" name="butacas2" value=" E10"><br>E10</td>
+            <td><input type="checkbox" name="butacas2" value=" E11"><br>E11</td>
+            <td><input type="checkbox" class="seleccionado" onclick="return false" name="butacas2" value=" E12"><br>E12</td>
+            <td><input type="checkbox" class="seleccionado" onclick="return false" name="butacas2" value=" E13"><br>E13</td>
+            <td><input type="checkbox" class="seleccionado" onclick="return false" name="butacas2" value=" E14"><br>E14</td>
+            <td><input type="checkbox" class="seleccionado" onclick="return false" name="butacas2" value=" E15"><br>E15</td>
+        </tr>
+        
+        <tr class="filaF">
+          <td><input type="checkbox" name="butacas2" value=" F01"><br><span class="checkboxtexto">F01</span></td>
+          <td><input type="checkbox" name="butacas2" value=" F02"><br><span class="checkboxtexto">F02</span></td>
+          <td><input type="checkbox" name="butacas2" value=" F03"><br><span class="checkboxtexto">F03</span></td>
+          <td><input type="checkbox" name="butacas2" value=" F04"><br><span class="checkboxtexto">F04</span></td>
+          <td><input type="checkbox" name="butacas2" value=" F05"><br><span class="checkboxtexto">F05</span></td>
+          <td><input type="checkbox" name="butacas2" value=" F06"><br><span class="checkboxtexto">F06</span></td>
+          <td><input type="checkbox" name="butacas2" value=" F07"><br><span class="checkboxtexto">F07</span></td>
+          <td><input type="checkbox" name="butacas2" value=" F08"><br><span class="checkboxtexto">F08</span></td>
+          <td><input type="checkbox" name="butacas2" value=" F09"><br><span class="checkboxtexto">F09</span></td>
+          <td><input type="checkbox" class="seleccionado"  name="butacas2" value=" F10"><br><span class="checkboxtexto">F10</span></td>
+          <td><input type="checkbox" class="seleccionado"  name="butacas2" value=" F11"><br><span class="checkboxtexto">F11</span></td>
+          <td><input type="checkbox" class="seleccionado"  name="butacas2" value=" F12"><br><span class="checkboxtexto">F12</span></td>
+          <td><input type="checkbox" class="seleccionado"  name="butacas2" value=" F13"><br><span class="checkboxtexto">F13</span></td>
+          <td><input type="checkbox" class="seleccionado"  name="butacas2" value=" F14"><br><span class="checkboxtexto">F14</span></td>
+          <td><input type="checkbox" class="seleccionado"  name="butacas2" value=" F15"><br><span class="checkboxtexto">F15</span></td>
+
+      </tr>
+      <tr class="filaG">
+        <td><input type="checkbox" class="seleccionado"name="butacas2" value=" G01"><br>G01</td>
+        <td><input type="checkbox" class="seleccionado" name="butacas2" value=" G02"><br>G02</td>
+        <td><input type="checkbox" class="seleccionado"name="butacas2" value=" G03"><br>G03</td>
+        <td><input type="checkbox" class="seleccionado"name="butacas2" value=" G04"><br>G04</td>
+        <td><input type="checkbox" class="seleccionado"name="butacas2" value=" G05"><br>G05</td>
+        <td><input type="checkbox" class="seleccionado"name="butacas2" value=" G06"><br>G06</td>
+        <td><input type="checkbox" name="butacas2" value=" G07"><br>G07</td>
+        <td><input type="checkbox" name="butacas2" value=" G08"><br>G08</td>
+        <td><input type="checkbox" name="butacas2" value=" G09"><br>G09</td>
+        <td><input type="checkbox" name="butacas2" value=" G10"><br>G10</td>
+        <td><input type="checkbox" name="butacas2" value=" G11"><br>G11</td>
+        <td><input type="checkbox" name="butacas2" value=" G12"><br>G12</td>
+        <td><input type="checkbox" class="seleccionado"name="butacas2" value=" G13"><br>G13</td>
+        <td><input type="checkbox" class="seleccionado"name="butacas2" value=" G14"><br>G14</td>
+        <td><input type="checkbox" class="seleccionado"name="butacas2" value=" G15"><br>G15</td>
+    </tr>
+    </table>
+    <div class="text-center pt-3">
+    <button id="btnSubmit" class="btn btn-dark btn-md" onclick="compra()">Cotizar</button>
+    <button id="limpiarBtn" onclick="limpiar()" class="btn btn-dark btn-md">Borrar</button>  
+
+    </div>
+  </div>  
+</form>
+
+            <div class="cotizacion border border-dark pt-5 ps-5">
+
+            <output id="outnResultado2"></output><br><br>  
+
+            <p> Ha elegido la fecha  
+            <span class="output3"></span>
+            </p>
+
+            <p> Ha elegido el cine en  
+            <span class="output1"></span>
+            </p>
+
+            <p> Ha elegido la
+                <span class="output2"></span>
+            </p> 
+            
+            <output id="outnResultado"></output><br><br>
+            <output id="outnResultado3"></output><br><br>
+            <output id="outnResultado4"></output><br><br>
+            <output id="outnResultado5"></output><br><br>
+            <output id="outnResultado6"></output><br><br>
+            <output id="outnResultado7"></output><br><br>
+            <output id="outnResultado8"></output><br><br>
+            <output id="outnResultado9"></output><br><br>
+            </div>
+
+            
+            <div class="wrapContact border border-dark">
+              <div class="efectuarPago text-center">
+                <h4 class="pb-3 pt-3">Efectuar Pago</h4>
+              </div>
+              
+            
+            <div class="wrapPago pt-5 pb-3">
+              <ul>
+                <li><i class="fa-brands fa-cc-visa  fa-2x"></i></li>
+                <li><i class="fa-brands fa-cc-mastercard  fa-2x"></i></li>
+                <li><i class="fa-brands fa-cc-amex  fa-2x"></i></li>
+                <li><i class="fa-brands fa-cc-amazon-pay  fa-2x"></i></li>
+              </ul>
+            <label for="numeroTarjeta">numero tarjeta:</label>
+            <input class="form-control" id="numeroTarjeta" type="number"><br>
+
+            <label for="fechaExpiracion">Fecha de expiración</label>
+            <input class="form-control" type="date" id="fechaExpiracion"><br>
+
+            <label for="codigoTarjeta">Código 3 digitos:</label>
+            <input class="form-control" id="codigoTarjeta" type="password"><br>
+
+            <button id="btnSubmit2" class="btn btn-dark btn-sm mb-5" onclick="pagar()">Pagar</button>
+            <button id="limpiarBtn" onclick="limpiar()" class="btn btn-dark btn-sm mb-5">Borrar</button>  
+ 
+          </div>
+            </div>
+
+
+
+<footer class="container-fluid  mt-5 pt-5 pb-3" style="color:#fff">
+  <div class="row">
+    <div class="col-lg-4 menu-footer">
+      <ul class="text-center">
+        <li><a class="footerHome" href="index.html">Inicio  / </a></li>
+        <li><a class="footerNosotros" href="nosotros.html">Nosotros  / </a></li>
+        <li><a class="footerDulceria" href="dulceria.html">Dulcería  / </a></li>
+        <li><a class="footerContacto" href="contacto.html">Contáctenos</a></li>
+      </ul>
+      <h5 class="text-center footerEncuesta">Si has visitado el cine, ayúdanos con esta encuesta para mejorar el servicio</h5>
+      <div class="text-center">
+      <a href="encuesta.html" class="btn btn-warning btn-sm mt-3 mb-5 footerEncuesta2" role="button" aria-pressed="true">Ver Encuesta</a>
+      </div>
+    </div>
+    <div class="col-lg-4 redes">
+      <div class="text-center pb-4">
+        <a href="index.html"><img src="imagenes/logo.png" alt="logo"></a>
+      </div>
+      <ul class="text-center">
+        <li><h2 class="text-center footerSocial">Síguenos en:</h2> </li>
+        <li><a href="https://www.facebook.com/" target="blank"><i class="fa-brands fa-facebook fa-2x" style="color:#fff"></i></a></li>
+        <li><a href="https://www.whatsapp.com/" target="blank"><i class="fa-brands fa-whatsapp fa-2x" style="color:#fff"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="blank"><i class="fa-brands fa-instagram fa-2x " style="color:#fff"></i></a></li>
+        <li><a href="https://www.youtube.com/" target="blank"><i class="fa-brands fa-youtube fa-2x " style="color:#fff"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-lg-4 footer-semanales">
+      <ul>
+        <li><a class="footerDomingo" href="semanales7.html">Domingo director del mes</a></li>
+        <li><a class="footerLunes" href="semanales1.html">Lunes de cine Latino</a></li>
+        <li><a class="footerMartes" href="semanales2.html">Martes de cine Europeo</a></li>
+        <li><a class="footerMiercoles" href="semanales3.html">Miércoles de cine Asiático</a></li>
+        <li><a class="footerJueves" href="semanales4.html">Jueves de cine Animado</a></li>
+        <li><a class="footerViernes" href="semanales5.html">Viernes de cine de culto #1</a></li>
+        <li><a class="footerSabado" href="semanales6.html">Sábado de cine de culto #2</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="js/compra/compra01.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>    

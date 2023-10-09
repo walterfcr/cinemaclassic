@@ -1,0 +1,106 @@
+.filaA input[type=checkbox] {
+    transform: scale(2);
+    margin: 10px;
+}
+
+.filaB input[type=checkbox] {
+    transform: scale(2);
+    margin: 10px 0 10px 25px;
+}
+
+.filaC input[type=checkbox] {
+    transform: scale(2);
+    margin: 10px;
+}
+
+.filaD input[type=checkbox] {
+    transform: scale(2);
+    margin: 10px 0 10px 25px;
+}
+
+.filaE input[type=checkbox] {
+    transform: scale(2);
+    margin: 10px;
+}
+
+.filaF input[type=checkbox] {
+    transform: scale(2);
+    margin: 10px 0 10px 25px;
+}
+
+.filaG input[type=checkbox] {
+    transform: scale(2);
+    margin: 10px;
+}
+
+.checkboxtexto{
+    padding:0 0 0 15px;
+}
+
+
+table{
+    margin:0 auto;
+}
+
+.zonaVip {
+    height:100px;
+    font-size: 25px;
+}
+
+#auto1{
+    display:none;
+}
+
+.poster img{
+    width:250px;
+}
+
+.comprarWrap{
+    width:50%;
+    margin:30px auto;
+}
+
+.comprarWrap2{
+    width:70%;
+    margin:30px auto;
+}
+
+.seleccionado {
+    appearance: none;
+    background-color: #350b10;
+    width: 11px;
+    height: 11px;
+}
+
+.cotizacion{
+    width:50%;
+    margin:0 auto;
+}
+
+.wrapContact{
+    width:30%;
+    margin:50px auto;
+}
+
+.wrapContact li{
+    display: inline-block;
+    padding:0 0 0 20px !important;
+}
+
+.efectuarPago {
+    background-color: #350b10;
+}
+
+.efectuarPago h4{
+    color: #fff !important;
+}
+
+.wrapPago{
+    padding:0 50px;
+}
+
+.pantalla img{
+    width:50%;
+    margin:50px auto 80px;
+    display:block;
+}
