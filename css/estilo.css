@@ -493,6 +493,32 @@ footer ul a:hover{
 
 }
 
+@media (min-width: 320px) and (max-width: 375px){
+
+    .semanales1, .semanales2, .semanales3, .semanales4, .semanales5, .semanales6, .semanales7{
+        height:150px; 
+    }
+
+    .semanales1 h1, .semanales2 h1, .semanales3 h1, .semanales4 h1, .semanales5 h1, .semanales6 h1, .semanales7 h1{
+        font-size: 1.2rem !important;
+        padding:60px 0 0;
+    }
+
+}
+
+@media (min-width: 376px) and (max-width: 575px){
+
+    .semanales1, .semanales2, .semanales3, .semanales4, .semanales5, .semanales6, .semanales7{
+        height:150px; 
+    }
+
+    .semanales1 h1, .semanales2 h1, .semanales3 h1, .semanales4 h1, .semanales5 h1, .semanales6 h1, .semanales7 h1{
+        font-size: 1.4rem !important;
+        padding:60px 0 0;
+    }
+
+}
+
 /*medium devices (tablets, 768px and up)*/
 
 @media (max-width: 768px){
@@ -538,6 +564,26 @@ footer ul a:hover{
 
 
 }
+
+@media (min-width: 576px) and (max-width: 768px){
+
+    .semanales1, .semanales2, .semanales3, .semanales4, .semanales5, .semanales6, .semanales7{
+        height:250px; 
+    }
+
+    .semanales1 h1, .semanales2 h1, .semanales3 h1, .semanales4 h1, .semanales5 h1, .semanales6 h1, .semanales7 h1{
+        font-size: 2.1rem !important;
+        padding:100px 0 0;
+    }
+
+    .wrap2 {
+        width:90%;
+    }
+
+}
+
+
+
 
 /*large devices (desktops, 992px and up)*/
 
@@ -587,6 +633,22 @@ footer ul a:hover{
         text-align: center;
     }
 
+
+}
+
+@media (min-width: 769px) and (max-width: 991px){
+
+    .semanales1, .semanales2, .semanales3, .semanales4, .semanales5, .semanales6, .semanales7{
+        height:350px; 
+    }
+
+    .semanales1 h1, .semanales2 h1, .semanales3 h1, .semanales4 h1, .semanales5 h1, .semanales6 h1, .semanales7 h1{
+        font-size: 3rem !important;
+    }
+
+    .wrap2 {
+        width:90%;
+    }
 
 }
 
