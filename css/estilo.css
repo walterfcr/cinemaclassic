@@ -506,6 +506,14 @@ footer ul a:hover{
         font-size: 1.2rem !important;
     }
 
+    .acerca h1{
+        font-size: 1.2rem !important;
+    }
+
+    .conozca h2, .comentarios h2{
+        font-size: 1.1rem !important;
+    }
+
 }
 
 @media (min-width: 376px) and (max-width: 575px){
@@ -521,6 +529,14 @@ footer ul a:hover{
 
     .detalles h1{
         font-size: 1.4rem !important;
+    }
+
+    .acerca h1{
+        font-size: 1.4rem !important;
+    }
+
+    .conozca h2, .comentarios h2{
+        font-size: 1.3rem !important;
     }
 
 }
@@ -586,6 +602,18 @@ footer ul a:hover{
         width:90%;
     }
 
+    .conozca h2{
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 600px){
+    lottie-player{
+        display:none;
+    }
+
+
 }
 
 @media (min-width: 320px) and (max-width: 768px){
@@ -601,6 +629,10 @@ footer ul a:hover{
 
     .detalles h1{
         font-size: 1.7rem !important;
+    }
+
+    .nos{
+        padding:0 5% !important;
     }
 
 }
@@ -670,6 +702,26 @@ footer ul a:hover{
 
     .wrap2 {
         width:90%;
+    }
+
+}
+
+
+@media (min-width: 576px) and (max-width: 991px){
+    .nos{
+        width:100% !important;
+    }
+    
+    .cineAnimacion {
+        margin:40px 0 0 60% !important;
+        display: block !important;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1024px){
+    .cineAnimacion{
+        padding:100px 0 0;
     }
 
 }
