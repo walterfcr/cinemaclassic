@@ -504,6 +504,10 @@ footer ul a:hover{
         padding:60px 0 0;
     }
 
+    .detalles h1{
+        font-size: 1.2rem !important;
+    }
+
 }
 
 @media (min-width: 376px) and (max-width: 575px){
@@ -515,6 +519,10 @@ footer ul a:hover{
     .semanales1 h1, .semanales2 h1, .semanales3 h1, .semanales4 h1, .semanales5 h1, .semanales6 h1, .semanales7 h1{
         font-size: 1.4rem !important;
         padding:60px 0 0;
+    }
+
+    .detalles h1{
+        font-size: 1.4rem !important;
     }
 
 }
@@ -582,6 +590,22 @@ footer ul a:hover{
 
 }
 
+@media (min-width: 320px) and (max-width: 768px){
+
+    .detalles h1{
+        text-align: center;
+        margin:0 !important;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width:768px){
+
+    .detalles h1{
+        font-size: 1.7rem !important;
+    }
+
+}
 
 
 
