@@ -317,8 +317,7 @@ main p{
 }
 
 .item {
-    background: #350b10;
-    border: 1px solid #eee;
+    border: 1px solid #686767;
     border-radius: 16px;
     padding: 15px;
     /*cursores web: https://www.w3schools.com/cssref/pr_class_cursor.asp*/
@@ -332,7 +331,7 @@ main p{
     font-family: "Poppins", sans-serif;
     margin: 15px 0;
     line-height: 1.3;
-    color: #fff;
+    color: #979191;
 }
 
 .item p {
@@ -340,7 +339,6 @@ main p{
     font-weight: 400;
     margin-bottom: 10px;
     line-height: 1.3;
-    color: #fff;
 }
 
 .item2 p {
@@ -349,7 +347,7 @@ main p{
     font-family: "Poppins", sans-serif;
     margin-bottom: 10px;
     line-height: 1.3;
-    color: #000;
+    
 }
 
 .testimonials_container {
