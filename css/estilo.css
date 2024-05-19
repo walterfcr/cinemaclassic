@@ -96,6 +96,10 @@ li{
     height:auto;
 }
 
+.detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8{
+    margin:0 20px 0 0;
+}
+
 .semanales{
     background-image:url('../imagenes/banner-semanales.webp');
     background-size:cover;
@@ -500,6 +504,18 @@ footer ul a:hover{
         margin:0 auto;
         display:block;
     }
+
+    .detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8{
+        margin:0 50px 0 0;
+    }
+
+    .tz-gallery img{
+        max-width: 200px !important;
+    }
+
+    .estrenopadding{
+    padding:0 0 50px 0 !important;    }
+
 }
 
 @media (min-width: 320px) and (max-width: 375px){
@@ -525,6 +541,10 @@ footer ul a:hover{
         font-size: 1.1rem !important;
     }
 
+    .estrenos h1{
+        font-size: 1.3rem !important;
+    }
+
 }
 
 @media (min-width: 376px) and (max-width: 575px){
@@ -548,6 +568,10 @@ footer ul a:hover{
 
     .conozca h2, .comentarios h2{
         font-size: 1.3rem !important;
+    }
+
+    .estrenos h1{
+        font-size: 1.7rem !important;
     }
 
 }
@@ -705,6 +729,12 @@ footer ul a:hover{
 
 }
 
+@media (min-width: 576px) and (max-width: 800px){
+.estrenos h1{
+    font-size: 2.2rem;
+}
+}
+
 @media (min-width: 769px) and (max-width: 991px){
 
     .semanales1, .semanales2, .semanales3, .semanales4, .semanales5, .semanales6, .semanales7{
@@ -737,6 +767,15 @@ footer ul a:hover{
 @media (min-width: 992px) and (max-width: 1024px){
     .cineAnimacion{
         padding:100px 0 0;
+    }
+
+    .detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8{
+        margin:0 10px 0 0;
+        font-size: 0.7rem;
+    }
+
+    .comprarMovie1, .comprarMovie2, .comprarMovie3, .comprarMovie4, .comprarMovie5, .comprarMovie6, .comprarMovie7, .comprarMovie8{
+        font-size: 0.7rem; 
     }
 
 }
