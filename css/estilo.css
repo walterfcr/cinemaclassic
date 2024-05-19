@@ -491,6 +491,17 @@ footer ul a:hover{
 
 }
 
+@media (min-width: 320px) and (max-width: 575px){
+    .wrapCine{
+         margin:0 5% !important;    
+    }
+
+    .wrapCine button {
+        margin:0 auto;
+        display:block;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 375px){
 
     .semanales1, .semanales2, .semanales3, .semanales4, .semanales5, .semanales6, .semanales7{
@@ -604,6 +615,10 @@ footer ul a:hover{
 
     .conozca h2{
         text-align: center;
+    }
+
+    .wrapCine{
+        margin:0 5% !important;    
     }
 
 }
