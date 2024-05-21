@@ -96,7 +96,7 @@ li{
     height:auto;
 }
 
-.detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8{
+.detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8, .detallesMovie13, .detallesMovie14, .detallesMovie15, .detallesMovie16, .detallesMovie17, .detallesMovie18, .detallesMovie19, .detallesMovie20, .detallesMovie21, .detallesMovie22, .detallesMovie23, .detallesMovie24, .detallesMovie25, .detallesMovie26, .detallesMovie27, .detallesMovie28, .detallesMovie29, .detallesMovie30, .detallesMovie31, .detallesMovie32, .detallesMovie33{
     margin:0 20px 0 0;
 }
 
@@ -505,7 +505,7 @@ footer ul a:hover{
         display:block;
     }
 
-    .detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8{
+    .detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8, .detallesMovie13, .detallesMovie14, .detallesMovie15, .detallesMovie16, .detallesMovie17, .detallesMovie18, .detallesMovie19, .detallesMovie20, .detallesMovie21, .detallesMovie22, .detallesMovie23, .detallesMovie24, .detallesMovie25, .detallesMovie26, .detallesMovie27, .detallesMovie28, .detallesMovie29, .detallesMovie30, .detallesMovie31, .detallesMovie32, .detallesMovie33{
         margin:0 50px 0 0;
     }
 
@@ -514,8 +514,19 @@ footer ul a:hover{
     }
 
     .estrenopadding{
-    padding:0 0 50px 0 !important;    }
+    padding:0 0 50px 0 !important;    
+    }
 
+    #dia1, #dia2, #dia3, #dia4, #dia5, #dia6, #dia7{
+        width:100%;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width:335px){
+    .semanales img{
+        max-width: 40%;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 375px){
@@ -545,6 +556,14 @@ footer ul a:hover{
         font-size: 1.3rem !important;
     }
 
+    .semanales h2{
+        font-size: 1.4rem !important;
+    }
+    
+    .semanales p{
+        font-size: 0.9rem !important;
+    }
+
 }
 
 @media (min-width: 376px) and (max-width: 575px){
@@ -572,6 +591,18 @@ footer ul a:hover{
 
     .estrenos h1{
         font-size: 1.7rem !important;
+    }
+
+    .semanales h2{
+        font-size: 1.5rem !important;
+    }
+    
+    .semanales p{
+        font-size: 1rem !important;
+    }
+
+    .semanales img{
+        max-width: 50%;
     }
 
 }
@@ -733,6 +764,36 @@ footer ul a:hover{
 .estrenos h1{
     font-size: 2.2rem;
 }
+
+}
+
+@media (min-width: 576px) and (max-width: 610px){ 
+    .semanales h1{
+        font-size: 2.4rem;
+    }
+    
+    .semanales p{
+        font-size: 1.2rem;
+    }
+
+    #dia1, #dia2, #dia3, #dia4, #dia5, #dia6, #dia7{
+        width:20px;
+    }
+
+    #dia1 a, #dia2 a, #dia3 a, #dia4 a, #dia5 a, #dia6 a, #dia7 a{
+        font-size:0.8rem;    
+    }
+}
+
+@media (min-width: 611px) and (max-width: 800px){ 
+    .semanales h2{
+        font-size: 2.5rem;
+    }
+    
+    .semanales p{
+        font-size: 1.3rem;
+    }
+    
 }
 
 @media (min-width: 769px) and (max-width: 991px){
@@ -769,14 +830,23 @@ footer ul a:hover{
         padding:100px 0 0;
     }
 
-    .detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8{
+    .detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8, .detallesMovie13, .detallesMovie14, .detallesMovie15, .detallesMovie16, .detallesMovie17, .detallesMovie18, .detallesMovie19, .detallesMovie20, .detallesMovie21, .detallesMovie22, .detallesMovie23, .detallesMovie24, .detallesMovie25, .detallesMovie26, .detallesMovie27, .detallesMovie28, .detallesMovie29, .detallesMovie30, .detallesMovie31, .detallesMovie32, .detallesMovie33{
         margin:0 10px 0 0;
         font-size: 0.7rem;
     }
 
-    .comprarMovie1, .comprarMovie2, .comprarMovie3, .comprarMovie4, .comprarMovie5, .comprarMovie6, .comprarMovie7, .comprarMovie8{
-        font-size: 0.7rem; 
+    .comprarMovie1, .comprarMovie2, .comprarMovie3, .comprarMovie4, .comprarMovie5, .comprarMovie6, .comprarMovie7, .comprarMovie8, .comprarMovie13, .comprarMovie14, .comprarMovie15, .comprarMovie16, .comprarMovie17, .comprarMovie18, .comprarMovie19, .comprarMovie20, .comprarMovie21, .comprarMovie22, .comprarMovie23, .comprarMovie24, .comprarMovie25, .comprarMovie26, .comprarMovie27, .comprarMovie28, .comprarMovie29, .comprarMovie30, .comprarMovie31, .comprarMovie32, .comprarMovie33{
+        font-size: 0.7rem;
     }
+
+    .semanales h2{
+        font-size: 2.5rem;
+    }
+    
+    .semanales p{
+        font-size: 1.3rem;
+    }
+
 
 }
 
