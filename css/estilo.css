@@ -548,6 +548,10 @@ footer ul a:hover{
         font-size: 1.2rem !important;
     }
 
+    .dulceriaPrincipal h1{
+        font-size: 1.2rem !important;
+    }
+
     .conozca h2, .comentarios h2{
         font-size: 1.1rem !important;
     }
@@ -582,6 +586,10 @@ footer ul a:hover{
     }
 
     .acerca h1{
+        font-size: 1.4rem !important;
+    }
+
+    .dulceriaPrincipal h1{
         font-size: 1.4rem !important;
     }
 
@@ -830,6 +838,11 @@ footer ul a:hover{
         padding:100px 0 0;
     }
 
+    .dulceAnimacion{
+        padding:30px 0 0;
+    }
+
+
     .detallesMovie1, .detallesMovie2, .detallesMovie3, .detallesMovie4, .detallesMovie5, .detallesMovie6, .detallesMovie7, .detallesMovie8, .detallesMovie13, .detallesMovie14, .detallesMovie15, .detallesMovie16, .detallesMovie17, .detallesMovie18, .detallesMovie19, .detallesMovie20, .detallesMovie21, .detallesMovie22, .detallesMovie23, .detallesMovie24, .detallesMovie25, .detallesMovie26, .detallesMovie27, .detallesMovie28, .detallesMovie29, .detallesMovie30, .detallesMovie31, .detallesMovie32, .detallesMovie33{
         margin:0 10px 0 0;
         font-size: 0.7rem;
@@ -886,6 +899,14 @@ footer ul a:hover{
 @media (max-width: 991.98px) {
     .ftco-counter .block-18 {
         margin-bottom: 2em;
+    }
+
+    .tituloDulce h3{
+        font-size:1.2rem;
+    }
+
+    .tituloDulce h4{
+        font-size:1.1rem;
     }
 }
 
