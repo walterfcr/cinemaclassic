@@ -19,11 +19,23 @@ const addDays4 = (date4, period) => {
     date4.setDate(date4.getDate() + period);
 };
 
+
+//array para los meses
 let meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+//array para los dias
 let dias_semana = ['Domingo', 'Lunes', 'martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
+//variable para la fecha
 let date = new Date();
+
+//crear otra variable para mostrar formato a español
 let fechaActual = dias_semana[date.getDay()] + ', ' + date.getDate() + ' de ' + meses[date.getMonth()] + ' de ' + date.getUTCFullYear();
+
+//despues mostrar la variable fechaActual a como lo necesiten
+
+
+
 let outputResultadoFecha = document.querySelector('#outputResultadoFecha');
 document.getElementById("outputResultadoFecha").innerHTML = "<option>" + fechaActual + "</option>" ;
 
@@ -47,6 +59,7 @@ document.getElementById("outputResultadoFecha4").innerHTML = "<option>" + fechaA
 // funcion para efectuar la compra
 function compra(){
     
+    let outputResultado2 = document.querySelector('#outnResultado2');
     let outputResultado3 = document.querySelector('#outnResultado3');
     let outputResultado4 = document.querySelector('#outnResultado4');   
     let outputResultado5 = document.querySelector('#outnResultado5');
@@ -54,9 +67,7 @@ function compra(){
     let outputResultado7 = document.querySelector('#outnResultado7');  
     let outputResultado8 = document.querySelector('#outnResultado8');
     let outputResultado9 = document.querySelector('#outnResultado9');
-    let outputResultado10 = document.querySelector('#outnResultado10');
     let nombre = document.getElementById("nombre").value;
-    let outputResultado2 = document.querySelector('#outnResultado2');
     let form = document.getElementById('cinema');
     let outputResultado = document.querySelector('#outnResultado');
     let values = [];
@@ -96,10 +107,6 @@ function compra(){
             icon:'error',
             iconColor:'#3a7aa5',
             text: 'Campos vacios. Intentar de nuevo por favor.',
-            imageUrl:"imagenes/logo.png",
-            imageWidth:100,
-            imageHeight:100,
-            imageAlt:'Logotipo de la empresa',
             onOpen: function() {
                 swal.showLoading()
             }
@@ -115,19 +122,27 @@ function compra(){
     
     } else 
     // validar selects cine y tanda
-    if(document.getElementById("cine").value == "") {
+    if(document.getElementById("fecha").value == "") {
+        swal.fire({
+            icon: "info",
+            title: "Atención",
+            html: '<p class="formatos1"> Debes elegir una fecha </p> '
+        })
+    } else if(document.getElementById("cine").value == "") {
         swal.fire({
             icon: "info",
             title: "Atención",
             html: '<p class="formatos1"> Debes elegir un cine </p> '
         })
-    } else if(document.getElementById("tanda").value == "") {
+    }else if(document.getElementById("tanda").value == "") {
         swal.fire({
             icon: "info",
             title: "Atención",
             html: '<p class="formatos1"> Debes elegir la Tanda </p> '
         })
     }
+
+
 
     
     selectElement = document.querySelector('#fecha');
@@ -169,12 +184,11 @@ function compra(){
         if (inpt.checked) { 
         contador++;
         } 
-        } if(contador > 6) {
+        } if(contador > 10) {
         
             swal.fire({
                 icon: "info",
-                title: "Atención",
-                html: '<p class="formatos1"> has alcanzado el limite de asientos</p> '
+                title: "Has alcanzado el limite de asientos",
             })    
 
         contador = 0;
@@ -210,7 +224,7 @@ function compra(){
         outputResultado7.innerHTML = "el Total es: " + "¢" + totalEntradas;
         outputResultado8.innerHTML = "Cargo de Servicio 5%: " + "¢" + impuesto;
         outputResultado9.innerHTML = "Total a Pagar: " + "¢" + totalPagar;
-        outputResultado10.innerHTML = "Efectuar Pago: " + "¢" + totalPagar;
+       
 
     })
 
@@ -224,14 +238,9 @@ function pagar() {
     if (numeroTarjeta.length != 16 ){
 
         Swal.fire({
-            title: 'Atención',
-            icon:'error',
+            title: 'Por favor ingrese los 16 digitos de el número de tarjeta.',
             iconColor:'#3a7aa5',
-            text: 'Por favor ingrese los 16 digitos de el número de tarjeta.',
-            imageUrl:"imagenes/logo.png",
-            imageWidth:100,
-            imageHeight:100,
-            imageAlt:'Logotipo de la empresa',
+            html:'<iframe src="https://embed.lottiefiles.com/animation/80029"></iframe>',
             onOpen: function() {
                 swal.showLoading()
             }
@@ -247,14 +256,9 @@ function pagar() {
 }else if(fechaExpiracion == '' || new Date(fechaExpiracion) <= new Date()){
 
     Swal.fire({
-        title: 'Atención',
-        icon:'error',
+        title: 'Por favor ingrese una fecha mayor al día de hoy.',
         iconColor:'#3a7aa5',
-        text: 'Por favor ingrese una fecha mayor al día de hoy.',
-        imageUrl:"imagenes/logo.png",
-        imageWidth:100,
-        imageHeight:100,
-        imageAlt:'Logotipo de la empresa',
+        html:'<iframe src="https://embed.lottiefiles.com/animation/80029"></iframe>',
         onOpen: function() {
             swal.showLoading()
         }
@@ -270,14 +274,10 @@ function pagar() {
 }else if (codigoTarjeta.length != 3 ){
 
     Swal.fire({
-        title: 'Atención',
-        icon:'error',
+        title: 'Por favor ingrese el código de seguridad de 3 digitos.',
         iconColor:'#3a7aa5',
-        text: 'Por favor ingrese el código de seguridad de 3 digitos.',
-        imageUrl:"imagenes/logo.png",
-        imageWidth:100,
-        imageHeight:100,
-        imageAlt:'Logotipo de la empresa',
+        html:'<iframe src="https://embed.lottiefiles.com/animation/80029"></iframe>',
+
         onOpen: function() {
             swal.showLoading()
         }
@@ -292,14 +292,9 @@ function pagar() {
 
 }else {
     Swal.fire({
-        title: 'Atención',
-        icon:'error',
+        title: 'Compra Realizada',
         iconColor:'#3a7aa5',
-        text: 'Pago exitoso!.',
-        imageUrl:"imagenes/logo.png",
-        imageWidth:100,
-        imageHeight:100,
-        imageAlt:'Logotipo de la empresa',
+        html:'<iframe src="https://embed.lottiefiles.com/animation/9912"></iframe>',
         onOpen: function() {
             swal.showLoading()
         }
@@ -313,3 +308,21 @@ function pagar() {
     ) 
 }
 }
+
+
+function limpiar(){
+    location.reload();
+    document.getElementsByClassName("output1").value = "";
+    document.getElementsByClassName("output2").value = "";
+    document.getElementsByClassName("output3").value = "";
+    outputResultado.innerHTML = "";   
+    outputResultado2.innerHTML = "";  
+    outputResultado3.innerHTML = "";
+    outputResultado4.innerHTML = "";
+    outputResultado5.innerHTML = "";
+    outputResultado6.innerHTML = "";
+    outputResultado7.innerHTML = "";
+    outputResultado8.innerHTML = "";
+    outputResultado9.innerHTML = "";
+   
+};

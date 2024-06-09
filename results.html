@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Page</title>
+</head>
+<body>
+    <h1>Detalles de la Compra</h1>
+    <div id="resultContainer">
+        <!-- Result will be displayed here -->
+    </div>
+    <button onclick="goBack()">Regresar</button>
+
+    <script>
+        function displayResults() {
+            let resultData = JSON.parse(localStorage.getItem('resultData'));
+
+            if (resultData) {
+                document.getElementById('resultContainer').innerHTML = `
+                    <p>Nombre: ${resultData.nombre}</p>
+                    <p>Fecha: ${resultData.fecha}</p>
+                    <p>Cine: ${resultData.cine}</p>
+                    <p>Tanda: ${resultData.tanda}</p>
+                    <p>Asientos: ${resultData.asientos}</p>
+                    <p>Entradas Regulares: ${resultData.entradasRegulares}</p>
+                    <p>Precio Regular: ${resultData.precioRegular}</p>
+                    <p>Entradas VIP: ${resultData.entradasVIP}</p>
+                    <p>Precio VIP: ${resultData.precioVIP}</p>
+                    <p>Total Entradas: ${resultData.totalEntradas}</p>
+                    <p>Cargo de Servicio: ${resultData.cargoServicio}</p>
+                    <p>Total a Pagar: ${resultData.totalPagar}</p>
+                `;
+            } else {
+                document.getElementById('resultContainer').innerHTML = 'No data available';
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        window.onload = displayResults;
+    </script>
+</body>
+</html>
