@@ -214,12 +214,12 @@ function compra(){
   
     }
         outputResultado2.innerHTML = "Nombre: " + nombre; 
-        outputResultado.innerHTML = "seleccionaste los asientos: " + values;  
+        outputResultado.innerHTML = "Seleccionaste los asientos: " + values;  
         outputResultado3.innerHTML = "La cantidad de entradas regulares son: " + checkSeleccionados.length; 
-        outputResultado4.innerHTML = "precio unitario: ¢3000" + "<br>" + "Total: " + "¢" + precio;
+        outputResultado4.innerHTML = "precio unitario: ¢3000 " + "<br>" + "Total: " + "¢" + precio;
         outputResultado5.innerHTML = "La cantidad de entradas VIP son: " + checkSeleccionadosVip.length; 
-        outputResultado6.innerHTML = "precio unitario: ¢5000" + "<br>" + "Total: " + "¢" + precioVip;
-        outputResultado7.innerHTML = "el Total es: " + "¢" + totalEntradas;
+        outputResultado6.innerHTML = "Precio unitario: ¢5000 " + "<br>" + "Total: " + "¢" + precioVip;
+        outputResultado7.innerHTML = "El Total es: " + "¢" + totalEntradas;
         outputResultado8.innerHTML = "Cargo de Servicio 5%: " + "¢" + impuesto;
         outputResultado9.innerHTML = "Total a Pagar: " + "¢" + totalPagar;
        

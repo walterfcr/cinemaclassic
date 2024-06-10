@@ -83,6 +83,34 @@
     <main id="resultadoCompra">
     <h1>Detalles de la Compra</h1>
     <hr>
+    <div class="qr">
+        <button type="button" class="btn btn-md ms-3 btn-warning" data-bs-toggle="modal" data-bs-target="#myModal"> Ver código QR </button>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true"> 
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Mostrar el código QR en la entrada </h5>
+                  <button type="button" class="close cursor btn btn-warning btn-md " data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-justify">
+                  <p>Solo se puede escanear una vez</p>
+                  <p>No compartir con nadie</p>
+                  <div class="pt-3"></div>
+                  <div class="text-center">
+                    <img src="imagenes/qrcode.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div class="container">
+                    <button type="button" class="btn btn-warning cursor" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     <p>Pelicula: John Wick </p>
 
     <div id="resultContainer">
@@ -96,8 +124,8 @@
             if (resultData) {
                 document.getElementById('resultContainer').innerHTML = `
                     <p> ${resultData.nombre}</p>
-                    <p> ${resultData.fecha}</p>
-                    <p> ${resultData.cine}</p>
+                    <p> Fecha: ${resultData.fecha}</p>
+                    <p> Cine: ${resultData.cine}</p>
                     <p> ${resultData.tanda}</p>
                     <p> ${resultData.asientos}</p>
                     <p> ${resultData.entradasRegulares}</p>
@@ -121,34 +149,7 @@
         window.onload = displayResults;
     </script>
 
-<div class="qr">
-<button type="button" class="btn btn-md ms-3 btn-warning" data-bs-toggle="modal" data-bs-target="#myModal"> Ver código QR </button>
-</div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  aria-hidden="true"> 
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Mostrar el código QR en la entrada </h5>
-          <button type="button" class="close cursor btn btn-warning btn-md " data-bs-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body text-justify">
-          <p>Solo se puede escanear una vez</p>
-          <p>No compartir con nadie</p>
-          <div class="pt-3"></div>
-          <div class="text-center">
-            <img src="imagenes/qrcode.png" alt="" class="img-fluid">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <div class="container">
-            <button type="button" class="btn btn-warning cursor" data-bs-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
     </main>
 
     <footer class="container-fluid  mt-5 pt-5 pb-3" style="color:#fff">
