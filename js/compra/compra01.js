@@ -58,7 +58,6 @@ document.getElementById("outputResultadoFecha4").innerHTML = "<option>" + fechaA
 
 // funcion para efectuar la compra
 function compra(){
-    
     let outputResultado2 = document.querySelector('#outnResultado2');
     let outputResultado3 = document.querySelector('#outnResultado3');
     let outputResultado4 = document.querySelector('#outnResultado4');   
@@ -214,7 +213,6 @@ function compra(){
         }
   
     }
-
         outputResultado2.innerHTML = "Nombre: " + nombre; 
         outputResultado.innerHTML = "seleccionaste los asientos: " + values;  
         outputResultado3.innerHTML = "La cantidad de entradas regulares son: " + checkSeleccionados.length; 
@@ -300,8 +298,7 @@ function pagar() {
         };
 
         localStorage.setItem('resultData', JSON.stringify(resultData));
-
-        window.location.href = 'results.html';
+        window.open('results.html', '_blank');
     }
 }
 

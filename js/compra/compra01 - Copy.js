@@ -58,7 +58,7 @@ document.getElementById("outputResultadoFecha4").innerHTML = "<option>" + fechaA
 
 // funcion para efectuar la compra
 function compra(){
-    
+
     let outputResultado2 = document.querySelector('#outnResultado2');
     let outputResultado3 = document.querySelector('#outnResultado3');
     let outputResultado4 = document.querySelector('#outnResultado4');   
@@ -214,7 +214,6 @@ function compra(){
         }
   
     }
-
         outputResultado2.innerHTML = "Nombre: " + nombre; 
         outputResultado.innerHTML = "seleccionaste los asientos: " + values;  
         outputResultado3.innerHTML = "La cantidad de entradas regulares son: " + checkSeleccionados.length; 
@@ -235,79 +234,75 @@ function pagar() {
     let numeroTarjeta = document.getElementById("numeroTarjeta").value;
     let codigoTarjeta = document.getElementById("codigoTarjeta").value;
     let fechaExpiracion = document.getElementById("fechaExpiracion").value;
-    if (numeroTarjeta.length != 16 ){
 
+    if (numeroTarjeta.length != 16) {
         Swal.fire({
             title: 'Por favor ingrese los 16 digitos de el número de tarjeta.',
-            iconColor:'#3a7aa5',
-            html:'<iframe src="https://embed.lottiefiles.com/animation/80029"></iframe>',
+            iconColor: '#3a7aa5',
+            html: '<iframe src="https://embed.lottiefiles.com/animation/80029"></iframe>',
             onOpen: function() {
-                swal.showLoading()
+                Swal.showLoading()
             }
-        }).then(
-            function() {},
-            function(dismiss) {
-                if (dismiss === 'timer') {
-                    console.log('Desplegable cerrada')
-                }
+        }).then(function() {
+            console.log('Desplegable cerrada');
+        });
+    } else if (fechaExpiracion == '' || new Date(fechaExpiracion) <= new Date()) {
+        Swal.fire({
+            title: 'Por favor ingrese una fecha mayor al día de hoy.',
+            iconColor: '#3a7aa5',
+            html: '<iframe src="https://embed.lottiefiles.com/animation/80029"></iframe>',
+            onOpen: function() {
+                Swal.showLoading()
             }
-        ) 
-
-}else if(fechaExpiracion == '' || new Date(fechaExpiracion) <= new Date()){
-
-    Swal.fire({
-        title: 'Por favor ingrese una fecha mayor al día de hoy.',
-        iconColor:'#3a7aa5',
-        html:'<iframe src="https://embed.lottiefiles.com/animation/80029"></iframe>',
-        onOpen: function() {
-            swal.showLoading()
-        }
-    }).then(
-        function() {},
-        function(dismiss) {
-            if (dismiss === 'timer') {
-                console.log('Desplegable cerrada')
+        }).then(function() {
+            console.log('Desplegable cerrada');
+        });
+    } else if (codigoTarjeta.length != 3) {
+        Swal.fire({
+            title: 'Por favor ingrese el código de seguridad de 3 digitos.',
+            iconColor: '#3a7aa5',
+            html: '<iframe src="https://embed.lottiefiles.com/animation/80029"></iframe>',
+            onOpen: function() {
+                Swal.showLoading()
             }
-        }
-    ) 
-
-}else if (codigoTarjeta.length != 3 ){
-
-    Swal.fire({
-        title: 'Por favor ingrese el código de seguridad de 3 digitos.',
-        iconColor:'#3a7aa5',
-        html:'<iframe src="https://embed.lottiefiles.com/animation/80029"></iframe>',
-
-        onOpen: function() {
-            swal.showLoading()
-        }
-    }).then(
-        function() {},
-        function(dismiss) {
-            if (dismiss === 'timer') {
-                console.log('Desplegable cerrada')
+        }).then(function() {
+            console.log('Desplegable cerrada');
+        });
+    } else {
+        Swal.fire({
+            title: 'Compra Realizada',
+            iconColor: '#3a7aa5',
+            html: '<iframe src="https://embed.lottiefiles.com/animation/9912"></iframe>',
+            onOpen: function() {
+                Swal.showLoading()
             }
-        }
-    ) 
+        }).then(function() {
+            console.log('Desplegable cerrada');
+        });
 
-}else {
-    Swal.fire({
-        title: 'Compra Realizada',
-        iconColor:'#3a7aa5',
-        html:'<iframe src="https://embed.lottiefiles.com/animation/9912"></iframe>',
-        onOpen: function() {
-            swal.showLoading()
-        }
-    }).then(
-        function() {},
-        function(dismiss) {
-            if (dismiss === 'timer') {
-                console.log('Desplegable cerrada')
-            }
-        }
-    ) 
+        let resultData = {
+            numeroTarjeta: numeroTarjeta,
+            codigoTarjeta: codigoTarjeta,
+            fechaExpiracion: fechaExpiracion,
+            fecha: document.querySelector('.output3').textContent,
+            cine: document.querySelector('.output1').textContent,
+            tanda: document.querySelector('.output2').textContent,
+            nombre: document.querySelector('#outnResultado2').textContent,
+            asientos: document.querySelector('#outnResultado').textContent,
+            entradasRegulares: document.querySelector('#outnResultado3').textContent,
+            precioRegular: document.querySelector('#outnResultado4').textContent,
+            entradasVIP: document.querySelector('#outnResultado5').textContent,
+            precioVIP: document.querySelector('#outnResultado6').textContent,
+            totalEntradas: document.querySelector('#outnResultado7').textContent,
+            cargoServicio: document.querySelector('#outnResultado8').textContent,
+            totalPagar: document.querySelector('#outnResultado9').textContent
+        };
+
+        localStorage.setItem('resultData', JSON.stringify(resultData));
+        window.open('results.html', '_blank');
+    }
 }
-}
+
 
 
 function limpiar(){
