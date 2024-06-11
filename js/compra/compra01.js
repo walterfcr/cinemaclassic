@@ -66,8 +66,11 @@ function compra(){
     let outputResultado7 = document.querySelector('#outnResultado7');  
     let outputResultado8 = document.querySelector('#outnResultado8');
     let outputResultado9 = document.querySelector('#outnResultado9');
+    let outputResultado10 = document.querySelector('#outnResultado10');
     let nombre = document.getElementById("nombre").value;
+    let email = document.getElementById("email").value;
     let form = document.getElementById('cinema');
+    const movieTitle = document.getElementById('movieTitle').innerText;
     let outputResultado = document.querySelector('#outnResultado');
     let values = [];
     let checkSeleccionados = document.querySelectorAll('input[name="butacas"]:checked');
@@ -77,6 +80,13 @@ function compra(){
     let totalEntradas = precio + precioVip;
     let impuesto = totalEntradas / 100 * 5;
     let totalPagar = impuesto + totalEntradas;
+
+
+
+
+
+
+
 
     //validar campos nombre
     const input = document.getElementById('nombre');
@@ -120,6 +130,40 @@ function compra(){
 
     
     } else 
+
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+    
+
+    if (!email) {
+        Swal.fire({
+            title: 'Atención',
+            icon: 'error',
+            iconColor: '#3a7aa5',
+            text: 'Campos vacíos. Intentar de nuevo por favor.',
+        }).then((result) => {
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('Desplegable cerrada');
+            }
+        });
+    } else if (!isValidEmail(email)) {
+        Swal.fire({
+            title: 'Atención',
+            icon: 'error',
+            iconColor: '#3a7aa5',
+            text: 'Correo electrónico no válido. Intentar de nuevo por favor.',
+        }).then((result) => {
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('Desplegable cerrada');
+            }
+        });
+    }else
+
+    
     // validar selects cine y tanda
     if(document.getElementById("fecha").value == "") {
         swal.fire({
@@ -213,7 +257,9 @@ function compra(){
         }
   
     }
+        movieTitle.innerHTML = "Pelicula: " + movieTitle; 
         outputResultado2.innerHTML = "Nombre: " + nombre; 
+        outputResultado10.innerHTML = "Email: " + email; 
         outputResultado.innerHTML = "Seleccionaste los asientos: " + values;  
         outputResultado3.innerHTML = "La cantidad de entradas regulares son: " + checkSeleccionados.length; 
         outputResultado4.innerHTML = "precio unitario: ¢3000 " + "<br>" + "Total: " + "¢" + precio;
@@ -284,9 +330,11 @@ function pagar() {
             codigoTarjeta: codigoTarjeta,
             fechaExpiracion: fechaExpiracion,
             fecha: document.querySelector('.output3').textContent,
+            movieTitle: document.getElementById('movieTitle').textContent,
             cine: document.querySelector('.output1').textContent,
             tanda: document.querySelector('.output2').textContent,
             nombre: document.querySelector('#outnResultado2').textContent,
+            email: document.querySelector('#outnResultado10').textContent,
             asientos: document.querySelector('#outnResultado').textContent,
             entradasRegulares: document.querySelector('#outnResultado3').textContent,
             precioRegular: document.querySelector('#outnResultado4').textContent,

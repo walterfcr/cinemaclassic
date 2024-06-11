@@ -111,7 +111,6 @@
               </div>
             </div>
           </div>
-    <p>Pelicula: John Wick </p>
 
     <div id="resultContainer">
         <!-- Result will be displayed here -->
@@ -123,7 +122,9 @@
 
             if (resultData) {
                 document.getElementById('resultContainer').innerHTML = `
+                    <p> Película: ${resultData.movieTitle}</p>
                     <p> ${resultData.nombre}</p>
+                    <p> ${resultData.email}</p>
                     <p> Fecha: ${resultData.fecha}</p>
                     <p> Cine: ${resultData.cine}</p>
                     <p> ${resultData.tanda}</p>
